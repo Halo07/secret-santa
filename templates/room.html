@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png"
+          href="https://icons.iconarchive.com/icons/icons8/christmas-flat-color/128/gift-icon.png"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Secret Santa 🎅</title>
+    <link rel="stylesheet" href= {{ url_for('static', filename='vendor/bootstrap/css/bootstrap.css') }}/>
+    <link rel="stylesheet" href= {{ url_for('static', filename='css/scrolling-nav.css') }}/>
+</head>
+<body id="page-top">
+<header class="bg-primary text-white">
+    <div class="container text-center">
+        <h1>Welcome to <a href="/" class="alert-link"><font color="white">Secret Santa</font></a> 🎅</h1>
+        <p class="lead">Enter your name and your email adress and wait for an email! You’ll receive the name of the
+            person whom you will give a gift! Keep it secret!</p>
+        <small id="disclaimer" class="form-text text-muted">NO CUPS ALLOWED</small>
+    </div>
+</header>
+<center>
+    <form action="" method="post">
+        <br>
+        <div class="card border-secondary" style="max-width: 20rem;">
+            <h4 class="card-header">Add a new name</h4>
+            <small id="disclaimer" class="form-text text-muted">Let's hope that you are not on the naughty list.</small>
+            <div class="card-body">
+                <br>
+                <div class="form-group">
+                    <input name="name" type="text" class="form-control" aria-describedby="usernamebox"
+                           placeholder="Enter your name (ex: Barack Obama)">
+                    <br>
+                    <input name="email" type="text" class="form-control" aria-describedby="usernamebox"
+                           placeholder="Enter your email (ex: obama@gmail.com)">
+                    <small id="disclaimer" class="form-text text-muted">We'll never share your email or secret present
+                        with anyone else (except Grinch).</small>
+                    <br>
+                    <button type="submit" name="action" value="1" class="btn btn-primary btn-lg" {{ attributeadd }}>GET
+                        PRESENT
+                    </button>
+                    <br>
+                    <br>
+                    <p class="{{ type }}"> {{ useradderror }} </p>
+                </div>
+            </div>
+        </div>
+    </form>
+    <br>
+    <div class="card border-secondary" style="max-width: 20rem;">
+        <h4 class="card-header">Secret santa name list</h4>
+        <div class="card-body">
+            <p id="createusertable"></p>
+            <script>
+                var usertablearray = {{datatable | safe}}
+                    function makeTableHTML(usertablearray) {
+                        let result = "<table class=\"table table-hover\"> \n <thead> \n <tr> \n  <th scope=\"row\">Name</th> \n </thead>";
+                        for (let i = 0; i < usertablearray.length; i++) {
+                            result += "<tr>";
+                            for (let j = 0; j < usertablearray[i].length; j++) {
+                                result += "<td>" + usertablearray[i][j] + "</td>";
+                            }
+                            result += "</tr>";
+                        }
+                        result += "</table>";
+                        return result;
+                    }
+                document.getElementById("createusertable").innerHTML = makeTableHTML(usertablearray)
+            </script>
+            <br>
+
+            <form action="" method="post"
+                  onsubmit="return confirm('Are you sure you want to draw? (There is no turning back)');">
+                <button type="submit" value="2" name="action"
+                        class="btn btn-danger btn-lg {{ stateofdraw }}" {{ attributedraw }}>DRAW
+                </button>
+                <br>
+                <br>
+                <p class="text-info"> {{ drawerror }} </p>
+            </form>
+        </div>
+    </div>
+</center>
+<br>
+<footer class="py-5 bg-dark">
+    <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Mihai Bo$$ & Stefan Interlopu'</p>
+    </div>
+</footer>
+<script src={{ url_for('static', filename='vendor/jquery/jquery.min.js') }}></script>
+<script src={{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}></script>
+<script src={{ url_for('static', filename='vendor/jquery-easing/jquery.easing.min.js') }}></script>
+<script src={{ url_for('static', filename='js/scrolling-nav.js') }}></script>
+</body>
+</html>

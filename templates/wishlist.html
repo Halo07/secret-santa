@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png"
+          href="https://icons.iconarchive.com/icons/icons8/christmas-flat-color/128/gift-icon.png"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Secret Santa 🎅</title>
+    <link rel="stylesheet" href= {{ url_for('static', filename='vendor/bootstrap/css/bootstrap.css') }}/>
+    <link rel="stylesheet" href= {{ url_for('static', filename='css/scrolling-nav.css') }}/>
+</head>
+<body id="page-top">
+<header class="bg-primary text-white">
+    <div class="container text-center">
+        <h1>Welcome to <a href="/" class="alert-link"><font color="white">Secret Santa</font></a> 🎅</h1>
+        <p class="lead">Enter your name and your email adress and wait for an email! You’ll receive the name of the
+            person whom you will give a gift! Keep it secret! </p>
+        <small id="disclaimer" class="form-text text-muted">NO CUPS ALLOWED</small>
+    </div>
+</header>
+<center>
+    <br>
+    <div class="card border-secondary mb-3" style="max-width: 20rem;">
+        <h4 class="card-header">{{ name }}'s wishlist:</h4>
+        <div class="card-body">
+            <form action="" method="POST">
+                <div class="form-group">
+                    <textarea name="wishlisttext" class="form-control"
+                              rows="10" {{ editstate }}>{{ wishlisfromdb }}</textarea>
+                    <p class="text-info">Separate your wishes with ENTER!</p>
+                    <br>
+                    <br>
+                    <button name="action" type="submit" class="btn btn-primary btn-lg" value="1" {{ editstate }}>SAVE
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <br>
+</center>
+<div class="footer fixed-bottom">
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Mihai Bo$$ & Stefan Interlopu'</p>
+        </div>
+    </footer>
+</div>
+<script src={{ url_for('static', filename='vendor/jquery/jquery.min.js') }}></script>
+<script src={{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}></script>
+<script src={{ url_for('static', filename='vendor/jquery-easing/jquery.easing.min.js') }}></script>
+<script src={{ url_for('static', filename='js/scrolling-nav.js') }}></script>
+</body>
+</html>
