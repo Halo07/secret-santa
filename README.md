@@ -1,12 +1,12 @@
 # Secret Santa
 
-CUPS GENERATOR
+<b>CUPS GENERATOR</b>
 
-Open worldwide: --host=0.0.0.0 --port=80 (Flask arguments)
+Open worldwide: <b>--host=0.0.0.0 --port=80 (Flask arguments)</b>
 
 You need to change email and password in credentials.dat
 
-Prerequisite: sqlite3, Flask, smtplib, email.mime.text, email.mime.multipart
+Prerequisite: <b>sqlite3, Flask, smtplib, email.mime.text, email.mime.multipart</b>
 <br>
 <br>
 Aceasta barosaneala de proiect a fost facut de <b>Mihai Bo$$ & Stefan Interlopu'</b>
