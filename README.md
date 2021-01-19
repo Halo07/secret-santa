@@ -9,8 +9,10 @@ You need to change email and password in credentials.dat
 Prerequisite: sqlite3, Flask, smtplib, email.mime.text, email.mime.multipart
 
 
-
-
-
 Aceasta barosaneala de proiect a fost facut de Mihai Bo$$ & Stefan Interlopu'
 Ms.
+
+Screenshots:
+![alt text](https://i.imgur.com/nfqNAo8.png)
+
+![alt text](https://i.imgur.com/BMGqcIf.png)
