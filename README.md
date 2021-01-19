@@ -13,6 +13,5 @@ Aceasta barosaneala de proiect a fost facut de Mihai Bo$$ & Stefan Interlopu'
 Ms.
 
 Screenshots:
-![alt text](https://i.imgur.com/nfqNAo8.png)
-
-![alt text](https://i.imgur.com/BMGqcIf.png)
+<img src="https://i.imgur.com/nfqNAo8.png" width="600" height="auto">
+<img src="https://i.imgur.com/BMGqcIf.png" width="600" height="auto">
