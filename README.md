@@ -6,7 +6,7 @@ Open worldwide: --host=0.0.0.0 --port=80 (Flask arguments)
 
 You need to change email and password in credentials.dat
 
-<font color="green">Prerequisite: sqlite3, Flask, smtplib, email.mime.text, email.mime.multipart</font>
+Prerequisite: sqlite3, Flask, smtplib, email.mime.text, email.mime.multipart
 <br>
 <br>
 Aceasta barosaneala de proiect a fost facut de <b>Mihai Bo$$ & Stefan Interlopu'</b>
