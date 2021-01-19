@@ -10,6 +10,7 @@ Prerequisite: <b>sqlite3, Flask, smtplib, email.mime.text, email.mime.multipart<
 <br>
 <br>
 Aceasta barosaneala de proiect a fost facut de <b>Mihai Bo$$ & Stefan Interlopu'</b>
+<br>
 Ms.
 <br>
 <br>
