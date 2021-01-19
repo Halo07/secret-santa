@@ -1,2 +1,3 @@
-# secret-santa
+# Secret Santa
+
 CUPS GENERATOR
