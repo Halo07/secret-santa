@@ -3,9 +3,7 @@
 <b>CUPS GENERATOR</b>
 
 Open worldwide: <b>--host=0.0.0.0 --port=80 (Flask arguments)</b>
-
 You need to change email and password in credentials.dat
-
 Prerequisite: <b>sqlite3, Flask, smtplib, email.mime.text, email.mime.multipart</b>
 <br>
 <br>
